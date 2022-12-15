@@ -6,7 +6,6 @@ var __webpack_exports__ = {};
 // ------------------------------------
 // Hamburger
 // ------------------------------------
-alert("contact!!!!!");
 var burgerIcon = document.querySelector('.headerHam');
 var burgerIconTop = document.querySelector('.headerHam__icon--bar.top');
 var burgerIconMiddle = document.querySelector('.headerHam__icon--bar.middle');

@@ -1,7 +1,6 @@
 // ------------------------------------
 // Hamburger
 // ------------------------------------
-alert("app");
 const burgerIcon = document.querySelector('.headerHam');
 const burgerIconTop = document.querySelector('.headerHam__icon--bar.top');
 const burgerIconMiddle = document.querySelector('.headerHam__icon--bar.middle');

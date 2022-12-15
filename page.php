@@ -37,8 +37,9 @@
     <?php endif; ?>
 
 
-    <main class="aboutWrap">
+    <?php the_content(); ?>
 
+    <!-- <main class="aboutWrap">
         <!-- -------------------- -->
         <!-- Message   -->
         <!-- -------------------- -->
@@ -74,7 +75,7 @@
             <div class="ceoMes__wrap">
 
                 <div class="ceoMes__imgBox">
-                    <img src="../images/about__ceo.jpg" alt="CEO Message" class="ceoMes__imgBox--img" />
+                    <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/src/img/about__ceo.jpg" alt="CEO Message" class="ceoMes__imgBox--img" />
                 </div>
 
                 <div class="ceoMes__box">
@@ -134,11 +135,9 @@
                     width="" height="" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-
         </section>
 
-
-    </main>
+    </main> -->
 
 
 

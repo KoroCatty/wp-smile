@@ -69,6 +69,9 @@ function my_scripts_method() {
   
     } else if( is_page("about-us")){
       $scriptPath =  '/dist/about.js';
+
+    } else if( is_single()){
+      $scriptPath =  '/dist/about.js';
   
   }else {
         $scriptPath =  '/dist/contact.js';

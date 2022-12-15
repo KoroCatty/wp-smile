@@ -70,29 +70,33 @@
               alt="Logo"
               class="overWrap__box--img"
             />
-          </a>
+        </a>
         </li>
 
         <li class="overWrap__box--item">
-          <a href="/about.html" class="overWrap__box--link">About Us </a>
+          <a href="<?php echo esc_url( home_url('/') ); ?>" class="overWrap__box--link">Home</a>
+        </li>
+        <li class="overWrap__box--item">
+          <a href="<?php echo esc_url( home_url('/about-us') ); ?>" class="overWrap__box--link">About Us </a>
+        </li>
+        <li class="overWrap__box--item">
+          <a href="<?php echo esc_url( home_url('/') ); ?>" class="overWrap__box--link">Blog</a>
         </li>
 
-        <!-- <li class="overWrap__box--item">
-          <a href="/works.html" class="overWrap__box--link">WORKS </a>
-        </li> -->
-
-        <!-- <li class="overWrap__box--item">
-          <a href="/culture.html" class="overWrap__box--link">CULTURE </a>
-        </li> -->
-
-        <!-- <li class="overWrap__box--item">
-          <a href="" class="overWrap__box--link">TOPICS </a>
-        </li> -->
-
         <li class="overWrap__box--item">
-          <a href="/contact.html" class="overWrap__box--link">CONTACT </a>
+          <a href="<?php echo esc_url( home_url('/contact-us') ); ?>"  class="overWrap__box--link">CONTACT </a>
         </li>
       </ul>
+
+      <!-- Global Menuを表示 -->
+      <?php
+      // $args = array(
+      //   'menu' => 'smileMenu',
+      //   'menu_class' => 'overWrap__box',// ulタグのクラス名
+      //   'container' => false,
+      // );
+      // wp_nav_menu($args);
+      ?>
     </nav>
 
     <header class="header">

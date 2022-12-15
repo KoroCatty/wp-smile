@@ -8,6 +8,8 @@
 
 @use 'contact' as *;
 
+@use 'single' as *;
+
 // @import 'node_modules/bootstrap/scss/bootstrap';
 
 // Tailwind CSS
@@ -392,28 +394,29 @@ line-height: 1.5;
     }
 
     &Item {
+      height: 128px;
 
       @include mq(s) { 
-margin-top: 20px;
+// margin-top: 20px;
       }
     @include mq(m) { 
     
       }
 
-      &:nth-child(1) {
-        margin-bottom: 40px;
+      // &:nth-child(1) {
+      //   margin-bottom: 40px;
 
-        @include mq(s) { 
-          margin-bottom: 0;
-                }
-      }
-      &:nth-child(3) {
-        margin-top: 40px;
+      //   @include mq(s) { 
+      //     margin-bottom: 0;
+      //           }
+      // }
+      // &:nth-child(3) {
+      //   margin-top: 40px;
 
-        @include mq(s) { 
-          margin-top: 20px;
-                }
-      }
+      //   @include mq(s) { 
+      //     margin-top: 20px;
+      //           }
+      // }
 
       &--date {
         font-size: 0.8rem;
@@ -461,6 +464,30 @@ text-align: start;
     }
   }
 }
+
+// Posts from Admin
+.post-categories {
+  display: flex;
+margin-bottom: 12px;
+
+  li:nth-child(2) {
+    margin-left: 20px;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(22, 22, 22);
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+}
+
+
+
+
+
 /* ------------------------
 // Top Contact 
 ------------------------ */
