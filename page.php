@@ -37,12 +37,10 @@
     <?php endif; ?>
 
 
-    <?php the_content(); ?>
+    <?php // the_content(); ?>
 
-    <!-- <main class="aboutWrap">
-        <!-- -------------------- -->
-        <!-- Message   -->
-        <!-- -------------------- -->
+     <main class="aboutWrap">
+        <!-- Message    -->
         <section class="about__message">
             <div class="about__messageBox">
                 <h2 class="about__messageTitle">VISION</h2>
@@ -137,7 +135,7 @@
             </div>
         </section>
 
-    </main> -->
+    </main>
 
 
 

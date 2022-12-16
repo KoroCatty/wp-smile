@@ -21,6 +21,9 @@ function load_css()
     'all',
   );
   wp_enqueue_style('main');
+
+  // Font Awesome
+  wp_enqueue_style( 'font-awesome', "https://kit.fontawesome.com/f1ec62d0b6.js");
 }
 
 // To run the above function (～_scriptsはお決まり)

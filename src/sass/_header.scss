@@ -181,6 +181,83 @@
     width: 70vw;
   }
 }
+// Search Form ------------------------
+.searchBody {
+  max-width: 1080px;
+  // height: 50vh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.SearchTitle {
+  font-size: 2rem;
+ margin-bottom: 40px;
+}
+
+.searchedWord {
+font-size: 1.8rem;
+
+&--small {
+  font-size: 1rem;
+}
+}
+
+.resultMes {
+  text-align: center;
+}
+
+// searchform.php ---------------
+.searchInput[type=text] {
+width: 50% !important;
+
+@include mq(s) {
+  width: 90% !important;
+  display: block;
+  }
+}
+
+.searchBtn {
+  padding: 6px 12px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 4px;
+
+  @include mq(s) {
+margin-top: 28px;
+padding: 8px 24px;
+  }
+
+  i {
+    color: white;
+  }
+}
+
+// 404 Form ------------------------
+.ErrorBody {
+  max-width: 1080px;
+  height: 50vh;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.errorContainer {
+  font-size: 1.4rem;
+  margin-bottom: 40px;
+
+  @include mq(s) {
+    font-size: 1rem;
+  }
+
+  &--text1 {
+    margin-bottom: 20px;
+  }
+  &--text2 {
+   line-height: 1.8rem;
+  }
+}
+
+
+
+
 
 // js ------------------------
 .black {

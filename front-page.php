@@ -15,7 +15,7 @@
                 <p class="mainVis__textBlock--caption">
                     デザインで人を笑顔にする会社
                 </p>
-                <p class="mainVis__textBlock--caption">DIGSMILE INC.</p>
+                <p class="mainVis__textBlock--caption">K-SMILE INC.</p>
                 <h2 class="mainVis__textBlock--captionLarge">
                     DESIGN <br />
                     FOR<br />
@@ -35,14 +35,14 @@
             <div class="topAbout__box">
                 <h2 class="topAbout__box--title">ABOUT US</h2>
                 <p class="topAbout__box--text">
-                    DIGSMILEは、デザインで人を笑顔にする会社。<br />
+                    K-SMILEは、デザインで人を笑顔にする会社。<br />
                     なんでもない日常に少しのワクワクと遊び心を提供します。笑顔には世界<br />
                     を変える力がある、デザインには人を幸せにする力がある。毎日に幸せを<br />
                     感じて生きていきたい。<br />
-                    DIGSMILEの社名にはそんな想いが込められています。
+                    K-SMILEの社名にはそんな想いが込められています。
                 </p>
                 <div class="topAbout__box--btn">
-                    <a href="" class="topAbout__box--btnLink">READ MORE</a>
+                    <a href="<?php echo esc_url( home_url('/about-us') );  ?>" class="topAbout__box--btnLink">READ MORE</a>
                 </div>
             </div>
         </div>
@@ -58,9 +58,9 @@
                 <div class="introItem__img">
                     <img src="<?php echo esc_url(get_template_directory_uri() ); ?>/src/img/works-img.jpg"
                         alt="Introduction works" class="introItem__imgContent" />
-                    <p class="introItem__caption">DIGSMILEの制作実績を紹介します。</p>
+                    <p class="introItem__caption">K-SMILEの制作実績を紹介します。</p>
                     <div class="introItem--btn">
-                        <a href="" class="introItem--btnLink">READ MORE</a>
+                        <a href="https://k-works.netlify.app/design" class="introItem--btnLink">READ MORE</a>
                     </div>
                 </div>
             </div>
@@ -71,10 +71,10 @@
                     <img src="<?php echo esc_url(get_template_directory_uri() ); ?>/src/img/culture-img.jpg"
                         alt="Introduction works" class="introItem__imgContent" />
                     <p class="introItem__caption">
-                        DIGSMILEの社内文化について紹介します。
+                        K-SMILEの社内文化について紹介します。
                     </p>
                     <div class="introItem--btn">
-                        <a href="" class="introItem--btnLink">READ MORE</a>
+                        <a  class="introItem--btnLink">READ MORE</a>
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@
     <!-- News   -->
     <!-- -------------------- -->
     <section class="news">
-        <h2 class="news__title">LATEST TOPICS</h2>
+        <h2 class="news__title">LATEST POST</h2>
 
 
 
@@ -108,6 +108,9 @@
             </div>
             <?php endwhile; ?>
             <?php endif; ?>
+            
+<!-- pagination Plugin -->
+            <?php if( function_exists( 'wp_pagenavi')) { wp_pagenavi();} ?>
 
             <!-- <div class="news__boxItem">
                 <time class="news__boxItem--date">2020.02.01</time>
@@ -156,7 +159,7 @@
                 </p>
 
                 <div class="topContact--btn">
-                    <a href="" class="topContact--btnLink">READ MORE</a>
+                    <a href="<?php echo esc_url( home_url('/contact-us') );  ?>"  class="topContact--btnLink">READ MORE</a>
                 </div>
             </div>
         </div>

@@ -1,4 +1,148 @@
+@use "reset" as *;
+
+@use "setting" as *;
+
+.single__mainVis {
+    height: 40vh;
+    position: relative;
+  
+    // Black Bg
+    &::after {
+      background-color: #3b3b3b;
+      width: 50%;
+      height: 90%;
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      z-index: -1;
+  
+      @include mq(s) {
+        width: 75%;
+        height: 75%;
+      }
+      @include mq(m) {
+        width: 75%;
+      }
+    }
+  
+    &__img {
+      background-image: url('images/single_kv.jpg');
+      // background-image: url('images/kv-img.jpg'); // from dist/app.css
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 80%;
+      height: 80%;
+      background-position: center -40;
+    }
+  
+    &__textBlock {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      color: rgb(255, 255, 255);
+  
+      @include mq(s) {
+        left: 20%;
+      }
+      @include mq(m) {
+      }
+  
+      &--caption {
+        font-size: 1.2rem;
+        font-family: Noto Sans JP Bold;
+  
+        @include mq(s) {
+        }
+        @include mq(m) {
+          font-size: 1rem;
+        }
+      }
+  
+      &--captionLarge {
+        font-size: 4rem;
+        line-height: 1.3;
+        font-weight: 800;
+        font-family: Montserrat;
+        font-weight: bold;
+  
+        @include mq(s) {
+          font-size: 3.1rem;
+        }
+        @include mq(m) {
+          font-size: 3.1rem;
+        }
+      }
+    }
+  }
+  
+
+.postBody {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 10px 40px 10px;
+}
+
+.post-categories {
+  margin-bottom: 8px;
+}
+
 .article_title {
-    font-size: 100px;
-    text-align: center;
+  font-size: 2.4rem;
+  margin: 20px 0;
+  font-weight: 800;
+
+  @include mq(s) {
+    font-size: 1.4rem;
+  }
+  @include mq(m) {
+    font-size: 1.8rem;
+  }
+}
+
+.article_header {
+  text-align: center !important;
+
+  // アイキャッチ
+  .eyeCatch {
+    @include mq(s) {
+      width: 95vw;
+      height: auto;
+    }
+    @include mq(m) {
+      width: 80vw;
+      height: auto;
+    }
+  }
+}
+
+// コンテンツ (wp-admin managed)
+.article__body {
+  &Content {
+
+    * {
+        margin: 2rem 0;
+    }
+
+    p {
+    //   margin-bottom: 2rem;
+      line-height: 2rem;
+    }
+  }
+}
+
+// ページネーション
+.postLinks {
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+        color: blue;
+        transition: all 0.3s;
+    }
+  }
 }
