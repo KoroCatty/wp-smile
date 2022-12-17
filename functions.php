@@ -2,7 +2,7 @@
 get_template_part('Function/Enqueue'); 
 
 /*******************************
- Title Name in each page
+ Adding Theme support in each page
  ****************************/
 add_theme_support( 'title-tag' ); // タイトル名変更できるようにする
 add_theme_support( 'post-thumbnails' ); // アイキャッチ画像
@@ -25,7 +25,7 @@ add_filter( 'document_title_parts', 'my_document_title_parts');
 function my_document_title_parts($title) {
   if (is_home() ) {
     unset($title['tagline']); //タグラインを削除
-    $title['title'] = 'Kaz_businessは成功します。'; // Change text
+    $title['title'] = 'K-SMILE'; // Change text
   }
   return $title;
 }
@@ -58,11 +58,11 @@ function my_pre_get_posts($query) {
 }
 
 /*******************************
- タグなどの自動整形機能の無効化・有効化
+ <p>タグなどの自動整形機能の無効化・有効化
  ****************************/
 add_action( 'wp' , 'my_wpautop');
 function my_wpautop() {
-  if ( is_page('contact')) {
+  if ( is_page('contact-us')) {
     remove_filter( 'the_content', 'wpautop');
   }
 }

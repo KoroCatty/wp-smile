@@ -1,7 +1,10 @@
 <html <?php language_attributes(); ?>>
 
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/ fb# prefix属性: http://ogp.me/ns/ prefix属性#">
-    <title>Smile Design</title>
+    <!-- <title>Smile Design</title> -->
+
+    <!-- 検索外に設定 -->
+    <meta name=”robots” content=”noindex”>
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -76,10 +79,6 @@
 
             <!-- Search Form -->
             <li class="overWrap__box--item">
-                <!-- <form action="<?php // echo esc_url( home_url('/') ); ?> " method="get" class="">
-                    <input type="text" name="s" value="<?php // the_search_query(); ?>" placeholder="Search">
-                    <i class="fas fa-search"></i>
-                </form> -->
                 <?php  get_search_form(); ?>
             </li>
         </ul>

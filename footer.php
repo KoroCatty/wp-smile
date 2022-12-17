@@ -3,7 +3,7 @@
       <!-- footer   -->
       <!-- -------------------- -->
       <footer class="footer">
-        <div class="footer__copyright">©2018 DIGSMILE INC.</div>
+        <div class="footer__copyright">©2018 K-SMILE INC.</div>
       </footer>
     </div>
     <!-- jQuery本体を読み込むCDN -->

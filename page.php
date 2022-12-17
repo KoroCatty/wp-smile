@@ -36,9 +36,28 @@
     <?php } ?>
     <?php endif; ?>
 
+        <!-- -------------------- -->
+    <!-- Thanks MainVis  -->
+    <!-- -------------------- -->
+    <?php
+        if( is_page('contact-us/thanks')) : { ?>
+    <section>
+        <div class="about__mainVis">
+            <div class="about__mainVis__img"></div>
 
-    <?php // the_content(); ?>
+            <div class="about__mainVis__textBlock">
+                <h2 class="about__mainVis__textBlock--captionLarge">Thank You</h2>
+                <p class="about__mainVis__textBlock--caption">お問合せ誠にありがとうございます</p>
+            </div>
+        </div>
+    </section>
+    <?php } ?>
+    <?php endif; ?>
 
+
+<!-- Contents by Admin -->
+    <?php
+    if( is_page('about-us')) : { ?>
      <main class="aboutWrap">
         <!-- Message    -->
         <section class="about__message">
@@ -136,8 +155,11 @@
         </section>
 
     </main>
+    <?php } else: { ?>
+        <?php the_content(); ?> 
+        <?php } ?>
 
-
+    <?php endif; ?>
 
 
     <?php get_footer(); ?>
