@@ -64,6 +64,7 @@ body {
   margin-bottom: 120px;
 
   @include mq(s) {
+    margin-bottom: 46px;
   }
   @include mq(m) {
   }

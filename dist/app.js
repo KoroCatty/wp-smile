@@ -1,1 +1,499 @@
-(()=>{var e,o={91:()=>{var e=document.querySelector(".headerHam"),o=document.querySelector(".headerHam__icon--bar.top"),c=document.querySelector(".headerHam__icon--bar.middle"),l=document.querySelector(".headerHam__icon--bar.bottom"),r=document.querySelector(".entireWrap"),t=document.querySelector(".overWrap");e.addEventListener("click",(function(){o.classList.toggle("active"),c.classList.toggle("active"),l.classList.toggle("active"),r.classList.toggle("mask"),t.classList.toggle("hiddenMenu")})),window.addEventListener("DOMContentLoaded",(function(){var e=window.matchMedia("(min-width: 1px) and (max-width: 375px) "),o=window.matchMedia("(min-width: 376px) and (max-width: 480px) "),c=window.matchMedia("(min-width: 481px) and (max-width: 1540px) "),l=window.matchMedia("(min-width: 1541px)");if(c.matches){if(730<window.scrollY?document.querySelector(".logo").style.color="black":document.querySelector(".logo").style.color="white",730<window.scrollY)document.querySelector(".headerHam").classList.toggle("changeColor"),document.querySelectorAll(".headerHam__icon--bar").forEach((function(e){e.classList.toggle("changeColor")}));window.addEventListener("scroll",(function(){730<window.scrollY?(document.querySelector(".headerHam").classList.add("changeColor"),document.querySelectorAll(".headerHam__icon--bar").forEach((function(e){e.classList.add("changeColor")}))):(document.querySelector(".headerHam").classList.remove("changeColor"),document.querySelectorAll(".headerHam__icon--bar").forEach((function(e){e.classList.remove("changeColor")})))})),window.addEventListener("scroll",(function(){630<window.scrollY?document.querySelector(".logo").style.color="black":document.querySelector(".logo").style.color="white"}))}else if(l.matches){if(870<window.scrollY?document.querySelector(".logo").style.color="black":document.querySelector(".logo").style.color="white",780<window.scrollY)document.querySelector(".headerHam").classList.toggle("changeColor"),document.querySelectorAll(".headerHam__icon--bar").forEach((function(e){e.classList.toggle("changeColor")}));window.addEventListener("scroll",(function(){870<window.scrollY?(document.querySelector(".headerHam").classList.add("changeColor"),document.querySelectorAll(".headerHam__icon--bar").forEach((function(e){e.classList.add("changeColor")}))):(document.querySelector(".headerHam").classList.remove("changeColor"),document.querySelectorAll(".headerHam__icon--bar").forEach((function(e){e.classList.remove("changeColor")})))})),window.addEventListener("scroll",(function(){780<window.scrollY?document.querySelector(".logo").style.color="black":document.querySelector(".logo").style.color="white"}))}else if(e.matches){if(570<window.scrollY?document.querySelector(".logo").style.color="black":document.querySelector(".logo").style.color="white",640<window.scrollY)document.querySelector(".headerHam").classList.toggle("changeColor"),document.querySelectorAll(".headerHam__icon--bar").forEach((function(e){e.classList.toggle("changeColor")}));window.addEventListener("scroll",(function(){640<window.scrollY?(document.querySelector(".headerHam").classList.add("changeColor"),document.querySelectorAll(".headerHam__icon--bar").forEach((function(e){e.classList.add("changeColor")}))):(document.querySelector(".headerHam").classList.remove("changeColor"),document.querySelectorAll(".headerHam__icon--bar").forEach((function(e){e.classList.remove("changeColor")})))})),window.addEventListener("scroll",(function(){570<window.scrollY?document.querySelector(".logo").style.color="black":document.querySelector(".logo").style.color="white"}))}else if(o.matches){if(730<window.scrollY?document.querySelector(".logo").style.color="black":document.querySelector(".logo").style.color="white",810<window.scrollY)document.querySelector(".headerHam").classList.toggle("changeColor"),document.querySelectorAll(".headerHam__icon--bar").forEach((function(e){e.classList.toggle("changeColor")}));window.addEventListener("scroll",(function(){810<window.scrollY?(document.querySelector(".headerHam").classList.add("changeColor"),document.querySelectorAll(".headerHam__icon--bar").forEach((function(e){e.classList.add("changeColor")}))):(document.querySelector(".headerHam").classList.remove("changeColor"),document.querySelectorAll(".headerHam__icon--bar").forEach((function(e){e.classList.remove("changeColor")})))})),window.addEventListener("scroll",(function(){730<window.scrollY?document.querySelector(".logo").style.color="black":document.querySelector(".logo").style.color="white"}))}else{if(570<window.scrollY?document.querySelector(".logo").style.color="black":document.querySelector(".logo").style.color="white",570<window.scrollY)document.querySelector(".headerHam").classList.toggle("changeColor"),document.querySelectorAll(".headerHam__icon--bar").forEach((function(e){e.classList.toggle("changeColor")}));window.addEventListener("scroll",(function(){630<window.scrollY?(document.querySelector(".headerHam").classList.add("changeColor"),document.querySelectorAll(".headerHam__icon--bar").forEach((function(e){e.classList.add("changeColor")}))):(document.querySelector(".headerHam").classList.remove("changeColor"),document.querySelectorAll(".headerHam__icon--bar").forEach((function(e){e.classList.remove("changeColor")})))})),window.addEventListener("scroll",(function(){570<window.scrollY?document.querySelector(".logo").style.color="black":document.querySelector(".logo").style.color="white"}))}}));var n=document.querySelector(".headerHam"),a=document.querySelectorAll(".headerHam__icon--bar");n.addEventListener("click",(function(){n.classList.toggle("ClickChangeColor")})),n.addEventListener("click",(function(){a.forEach((function(e){e.classList.toggle("ClickChangeColor2")}))})),r.addEventListener("click",(function(){t.classList.remove("hiddenMenu"),r.classList.remove("mask"),n.classList.remove("ClickChangeColor"),a.forEach((function(e){e.classList.remove("ClickChangeColor2")})),o.classList.remove("active"),c.classList.remove("active"),l.classList.remove("active")})),window.addEventListener("DOMContentLoaded",(function(){window.addEventListener("scroll",(function(){console.log("横スクロール："+window.scrollX),console.log("縦スクロール："+window.scrollY)}))}))},837:()=>{}},c={};function l(e){var r=c[e];if(void 0!==r)return r.exports;var t=c[e]={exports:{}};return o[e](t,t.exports,l),t.exports}l.m=o,e=[],l.O=(o,c,r,t)=>{if(!c){var n=1/0;for(d=0;d<e.length;d++){for(var[c,r,t]=e[d],a=!0,s=0;s<c.length;s++)(!1&t||n>=t)&&Object.keys(l.O).every((e=>l.O[e](c[s])))?c.splice(s--,1):(a=!1,t<n&&(n=t));if(a){e.splice(d--,1);var i=r();void 0!==i&&(o=i)}}return o}t=t||0;for(var d=e.length;d>0&&e[d-1][2]>t;d--)e[d]=e[d-1];e[d]=[c,r,t]},l.o=(e,o)=>Object.prototype.hasOwnProperty.call(e,o),(()=>{var e={260:0,143:0};l.O.j=o=>0===e[o];var o=(o,c)=>{var r,t,[n,a,s]=c,i=0;if(n.some((o=>0!==e[o]))){for(r in a)l.o(a,r)&&(l.m[r]=a[r]);if(s)var d=s(l)}for(o&&o(c);i<n.length;i++)t=n[i],l.o(e,t)&&e[t]&&e[t][0](),e[t]=0;return l.O(d)},c=self.webpackChunkwp_works=self.webpackChunkwp_works||[];c.forEach(o.bind(null,0)),c.push=o.bind(null,c.push.bind(c))})(),l.O(void 0,[143],(()=>l(91)));var r=l.O(void 0,[143],(()=>l(837)));r=l.O(r)})();
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/javascript/app.js":
+/*!*******************************!*\
+  !*** ./src/javascript/app.js ***!
+  \*******************************/
+/***/ (() => {
+
+// ------------------------------------
+// Hamburger
+// ------------------------------------
+var burgerIcon = document.querySelector(".headerHam");
+var burgerIconTop = document.querySelector(".headerHam__icon--bar.top");
+var burgerIconMiddle = document.querySelector(".headerHam__icon--bar.middle");
+var burgerIconBottom = document.querySelector(".headerHam__icon--bar.bottom");
+
+// pointer-eventsを制御
+var burgerMenuEnablePointerEvents = document.querySelector(".overWrap");
+
+// Body Bg
+var bodyMask = document.querySelector(".entireWrap");
+// Hidden menu
+var overWrapActive = document.querySelector(".overWrap");
+burgerIcon.addEventListener("click", function () {
+  burgerIconTop.classList.toggle("active");
+  burgerIconMiddle.classList.toggle("active");
+  burgerIconBottom.classList.toggle("active");
+  burgerMenuEnablePointerEvents.classList.toggle("active");
+
+  // toggling Body Bg
+  bodyMask.classList.toggle("mask");
+
+  //   toggling Hidden menu
+  overWrapActive.classList.toggle("hiddenMenu");
+});
+
+// ------------------------------------
+// Burger Icon scrolling change Color
+// ------------------------------------
+window.addEventListener("DOMContentLoaded", init);
+function init() {
+  var tiny = window.matchMedia("(min-width: 1px) and (max-width: 375px) ");
+  var sp = window.matchMedia("(min-width: 376px) and (max-width: 480px) ");
+  var query = window.matchMedia("(min-width: 481px) and (max-width: 1540px) ");
+  var huge = window.matchMedia("(min-width: 1541px)");
+
+  // Switch JS depending on the browser size 
+  if (query.matches) {
+    // if the page is wider than 481px smaller than 1540px (PC) ---------
+    // Logo
+    if (730 < window.scrollY) {
+      document.querySelector(".logo").style.color = "black";
+    } else {
+      document.querySelector(".logo").style.color = "white";
+    }
+
+    //  Icon
+    if (730 < window.scrollY) {
+      document.querySelector(".headerHam").classList.toggle("changeColor");
+
+      // Icon Text
+      var ddd = document.querySelectorAll(".headerHam__icon--bar");
+      ddd.forEach(function (dddd) {
+        dddd.classList.toggle("changeColor");
+      });
+    }
+
+    // When scrolled for Burger Icon
+    window.addEventListener("scroll", function () {
+      if (730 < window.scrollY) {
+        // menu
+        document.querySelector(".headerHam").classList.add("changeColor");
+
+        // burger Icon
+        var aaa = document.querySelectorAll(".headerHam__icon--bar");
+        aaa.forEach(function (targetBox) {
+          targetBox.classList.add("changeColor");
+        });
+      } else {
+        document.querySelector(".headerHam").classList.remove("changeColor");
+        var _aaa = document.querySelectorAll(".headerHam__icon--bar");
+        _aaa.forEach(function (targetBox) {
+          targetBox.classList.remove("changeColor");
+        });
+      }
+    });
+    // when scrolled for Logo
+    window.addEventListener("scroll", function () {
+      if (630 < window.scrollY) {
+        document.querySelector(".logo").style.color = "black";
+      } else {
+        document.querySelector(".logo").style.color = "white";
+      }
+    });
+  } else if (huge.matches) {
+    // wider than 1541px (PC Huge size) ---------------------------
+    // Logo
+    if (870 < window.scrollY) {
+      document.querySelector(".logo").style.color = "black";
+    } else {
+      document.querySelector(".logo").style.color = "white";
+    }
+
+    //  Icon
+    if (780 < window.scrollY) {
+      document.querySelector(".headerHam").classList.toggle("changeColor");
+
+      // Icon Text
+      var _ddd = document.querySelectorAll(".headerHam__icon--bar");
+      _ddd.forEach(function (dddd) {
+        dddd.classList.toggle("changeColor");
+      });
+    }
+
+    // When scrolled for Burger Icon
+    window.addEventListener("scroll", function () {
+      if (870 < window.scrollY) {
+        // menu
+        document.querySelector(".headerHam").classList.add("changeColor");
+
+        // burger Icon
+        var aaa = document.querySelectorAll(".headerHam__icon--bar");
+        aaa.forEach(function (targetBox) {
+          targetBox.classList.add("changeColor");
+        });
+      } else {
+        document.querySelector(".headerHam").classList.remove("changeColor");
+        var _aaa2 = document.querySelectorAll(".headerHam__icon--bar");
+        _aaa2.forEach(function (targetBox) {
+          targetBox.classList.remove("changeColor");
+        });
+      }
+    });
+    // when scrolled for Logo
+    window.addEventListener("scroll", function () {
+      if (780 < window.scrollY) {
+        document.querySelector(".logo").style.color = "black";
+      } else {
+        document.querySelector(".logo").style.color = "white";
+      }
+    });
+  } else if (tiny.matches) {
+    // smaller than 375px (SP tiny size) ---------------------------
+    // Logo
+    if (570 < window.scrollY) {
+      document.querySelector(".logo").style.color = "black";
+    } else {
+      document.querySelector(".logo").style.color = "white";
+    }
+
+    //  Icon
+    if (640 < window.scrollY) {
+      document.querySelector(".headerHam").classList.toggle("changeColor");
+
+      // Icon Text
+      var _ddd2 = document.querySelectorAll(".headerHam__icon--bar");
+      _ddd2.forEach(function (dddd) {
+        dddd.classList.toggle("changeColor");
+      });
+    }
+
+    // When scrolled for Burger Icon
+    window.addEventListener("scroll", function () {
+      if (640 < window.scrollY) {
+        // menu
+        document.querySelector(".headerHam").classList.add("changeColor");
+
+        // burger Icon
+        var aaa = document.querySelectorAll(".headerHam__icon--bar");
+        aaa.forEach(function (targetBox) {
+          targetBox.classList.add("changeColor");
+        });
+      } else {
+        document.querySelector(".headerHam").classList.remove("changeColor");
+        var _aaa3 = document.querySelectorAll(".headerHam__icon--bar");
+        _aaa3.forEach(function (targetBox) {
+          targetBox.classList.remove("changeColor");
+        });
+      }
+    });
+    // when scrolled for Logo
+    window.addEventListener("scroll", function () {
+      if (570 < window.scrollY) {
+        document.querySelector(".logo").style.color = "black";
+      } else {
+        document.querySelector(".logo").style.color = "white";
+      }
+    });
+  } else if (sp.matches) {
+    // smaller than 480px and bigger than 376px (SP size) ---------------------------
+    // Logo
+    if (730 < window.scrollY) {
+      document.querySelector(".logo").style.color = "black";
+    } else {
+      document.querySelector(".logo").style.color = "white";
+    }
+
+    //  Icon
+    if (810 < window.scrollY) {
+      document.querySelector(".headerHam").classList.toggle("changeColor");
+
+      // Icon Text
+      var _ddd3 = document.querySelectorAll(".headerHam__icon--bar");
+      _ddd3.forEach(function (dddd) {
+        dddd.classList.toggle("changeColor");
+      });
+    }
+
+    // When scrolled for Burger Icon
+    window.addEventListener("scroll", function () {
+      if (810 < window.scrollY) {
+        // menu
+        document.querySelector(".headerHam").classList.add("changeColor");
+
+        // burger Icon
+        var aaa = document.querySelectorAll(".headerHam__icon--bar");
+        aaa.forEach(function (targetBox) {
+          targetBox.classList.add("changeColor");
+        });
+      } else {
+        document.querySelector(".headerHam").classList.remove("changeColor");
+        var _aaa4 = document.querySelectorAll(".headerHam__icon--bar");
+        _aaa4.forEach(function (targetBox) {
+          targetBox.classList.remove("changeColor");
+        });
+      }
+    });
+    // when scrolled for Logo
+    window.addEventListener("scroll", function () {
+      if (730 < window.scrollY) {
+        document.querySelector(".logo").style.color = "black";
+      } else {
+        document.querySelector(".logo").style.color = "white";
+      }
+    });
+  } else {
+    // if the page is 
+    // Logo
+    if (570 < window.scrollY) {
+      document.querySelector(".logo").style.color = "black";
+    } else {
+      document.querySelector(".logo").style.color = "white";
+    }
+
+    //  Icon
+    if (570 < window.scrollY) {
+      document.querySelector(".headerHam").classList.toggle("changeColor");
+
+      // Icon Text
+      var _ddd4 = document.querySelectorAll(".headerHam__icon--bar");
+      _ddd4.forEach(function (dddd) {
+        dddd.classList.toggle("changeColor");
+      });
+    }
+
+    // When scrolled for Burger Icon
+    window.addEventListener("scroll", function () {
+      if (630 < window.scrollY) {
+        // menu
+        document.querySelector(".headerHam").classList.add("changeColor");
+
+        // burger Icon
+        var aaa = document.querySelectorAll(".headerHam__icon--bar");
+        aaa.forEach(function (targetBox) {
+          targetBox.classList.add("changeColor");
+        });
+      } else {
+        document.querySelector(".headerHam").classList.remove("changeColor");
+        var _aaa5 = document.querySelectorAll(".headerHam__icon--bar");
+        _aaa5.forEach(function (targetBox) {
+          targetBox.classList.remove("changeColor");
+        });
+      }
+    });
+
+    // when scrolled for Logo
+    window.addEventListener("scroll", function () {
+      if (570 < window.scrollY) {
+        //
+        document.querySelector(".logo").style.color = "black";
+      } else {
+        document.querySelector(".logo").style.color = "white";
+      }
+    });
+  }
+}
+
+// --------------------------------
+//  Clicking makes change the Font color by toggling white and black
+// --------------------------------
+var burgerIconBlack = document.querySelector(".headerHam");
+var burgerIconBlack2 = document.querySelectorAll(".headerHam__icon--bar");
+burgerIconBlack.addEventListener("click", function () {
+  //   if (760 < window.scrollY) {
+  burgerIconBlack.classList.toggle("ClickChangeColor");
+  //   }
+});
+
+// Icon
+burgerIconBlack.addEventListener("click", function () {
+  //   if (760 < window.scrollY) {
+  burgerIconBlack2.forEach(function (bbb) {
+    bbb.classList.toggle("ClickChangeColor2");
+  });
+  //   }
+});
+
+// --------------------------------
+//   Click entireWrap area and remove everything
+// --------------------------------
+bodyMask.addEventListener("click", function () {
+  // Hidden menu
+  overWrapActive.classList.remove("hiddenMenu");
+
+  // Body Bg
+  bodyMask.classList.remove("mask");
+
+  // Burger text
+  burgerIconBlack.classList.remove("ClickChangeColor");
+
+  //   Burger Icon
+  burgerIconBlack2.forEach(function (bbb) {
+    bbb.classList.remove("ClickChangeColor2");
+  });
+  burgerMenuEnablePointerEvents.classList.remove("active");
+
+  // remove Burger Icon class
+  burgerIconTop.classList.remove("active");
+  burgerIconMiddle.classList.remove("active");
+  burgerIconBottom.classList.remove("active");
+});
+
+//  Get the scroll number of X and Y
+window.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("scroll", function () {
+    console.log("横スクロール：" + window.scrollX);
+    console.log("縦スクロール：" + window.scrollY);
+  });
+});
+
+/***/ }),
+
+/***/ "./src/sass/app.scss":
+/*!***************************!*\
+  !*** ./src/sass/app.scss ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"/app": 0,
+/******/ 			"app": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunkwp_works"] = self["webpackChunkwp_works"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	__webpack_require__.O(undefined, ["app"], () => (__webpack_require__("./src/javascript/app.js")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["app"], () => (__webpack_require__("./src/sass/app.scss")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;

@@ -124,7 +124,7 @@ margin-top: 12px;
   &__box {
     color: white;
     margin-top: 200px;
-    pointer-events: auto; // burgerメニューのみ押せるようにする 
+    // pointer-events: auto; // burgerメニューのみ押せるようにする 
 
     @include mq(s) {
       margin-top: 120px;
@@ -156,6 +156,11 @@ margin-top: 12px;
       letter-spacing: 1px;
     }
   }
+}
+
+// js
+.overWrap.active {
+  pointer-events: auto !important; // burgerメニュー内を押せるようにする 
 }
 
 // js

@@ -6,6 +6,9 @@ const burgerIconTop = document.querySelector('.headerHam__icon--bar.top');
 const burgerIconMiddle = document.querySelector('.headerHam__icon--bar.middle');
 const burgerIconBottom = document.querySelector('.headerHam__icon--bar.bottom');
 
+// pointer-eventsを制御
+const burgerMenuEnablePointerEvents = document.querySelector(".overWrap");
+
 
 // Body Bg
 const bodyMask = document.querySelector('.entireWrap');
@@ -16,6 +19,9 @@ burgerIcon.addEventListener('click', () => {
   burgerIconTop.classList.toggle('active');
   burgerIconMiddle.classList.toggle('active');
   burgerIconBottom.classList.toggle('active');
+
+  burgerMenuEnablePointerEvents.classList.toggle("active");
+
 
   // toggling Body Bg
   bodyMask.classList.toggle('mask');
@@ -122,6 +128,9 @@ overWrapActive.classList.remove('hiddenMenu');
   burgerIconBlack2.forEach((bbb) => {
     bbb.classList.remove('ClickChangeColor2');
   });
+
+  burgerMenuEnablePointerEvents.classList.remove("active");
+
 
   // remove Burger Icon class 
     burgerIconTop.classList.remove('active');
