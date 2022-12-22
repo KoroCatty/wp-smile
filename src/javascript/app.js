@@ -1,132 +1,364 @@
 // ------------------------------------
 // Hamburger
 // ------------------------------------
-const burgerIcon = document.querySelector('.headerHam');
-const burgerIconTop = document.querySelector('.headerHam__icon--bar.top');
-const burgerIconMiddle = document.querySelector('.headerHam__icon--bar.middle');
-const burgerIconBottom = document.querySelector('.headerHam__icon--bar.bottom');
+const burgerIcon = document.querySelector(".headerHam");
+const burgerIconTop = document.querySelector(".headerHam__icon--bar.top");
+const burgerIconMiddle = document.querySelector(".headerHam__icon--bar.middle");
+const burgerIconBottom = document.querySelector(".headerHam__icon--bar.bottom");
 
 // Body Bg
-const bodyMask = document.querySelector('.entireWrap');
+const bodyMask = document.querySelector(".entireWrap");
 // Hidden menu
-const overWrapActive = document.querySelector('.overWrap');
+const overWrapActive = document.querySelector(".overWrap");
 
-burgerIcon.addEventListener('click', () => {
-  burgerIconTop.classList.toggle('active');
-  burgerIconMiddle.classList.toggle('active');
-  burgerIconBottom.classList.toggle('active');
+burgerIcon.addEventListener("click", () => {
+  burgerIconTop.classList.toggle("active");
+  burgerIconMiddle.classList.toggle("active");
+  burgerIconBottom.classList.toggle("active");
 
   // toggling Body Bg
-  bodyMask.classList.toggle('mask');
+  bodyMask.classList.toggle("mask");
 
   //   toggling Hidden menu
-  overWrapActive.classList.toggle('hiddenMenu');
+  overWrapActive.classList.toggle("hiddenMenu");
 });
 
 // ------------------------------------
 // Burger Icon scrolling change Color
 // ------------------------------------
-window.addEventListener('DOMContentLoaded', function () {
-  // when loaded page
-  // Logo
-  if (760 < window.scrollY) {
-    document.querySelector('.logo').style.color = 'black';
-  } else {
-    document.querySelector('.logo').style.color = 'white';
-  }
+window.addEventListener("DOMContentLoaded", init);
+function init() {
+  let tiny = window.matchMedia("(min-width: 1px) and (max-width: 375px) ");
+  let sp = window.matchMedia("(min-width: 376px) and (max-width: 480px) ");
 
-  //  Icon
-  if (760 < window.scrollY) {
-    document.querySelector('.headerHam').classList.toggle('changeColor');
+  let query = window.matchMedia("(min-width: 481px) and (max-width: 1540px) ");
+  let huge = window.matchMedia("(min-width: 1541px)");
 
-    // Icon Text
-    const ddd = document.querySelectorAll('.headerHam__icon--bar');
-    ddd.forEach((dddd) => {
-      dddd.classList.toggle('changeColor');
-    });
-  }
-
-  // When scrolled for Burger Icon
-  window.addEventListener('scroll', function () {
-    if (840 < window.scrollY) {
-      // menu
-      document.querySelector('.headerHam').classList.add('changeColor');
-
-      // burger Icon
-      const aaa = document.querySelectorAll('.headerHam__icon--bar');
-      aaa.forEach((targetBox) => {
-        targetBox.classList.add('changeColor');
-      });
+    // Switch JS depending on the browser size 
+  if (query.matches) {
+    // if the page is wider than 481px smaller than 1540px (PC) ---------
+    // Logo
+    if (730 < window.scrollY) {
+      document.querySelector(".logo").style.color = "black";
     } else {
-      document.querySelector('.headerHam').classList.remove('changeColor');
+      document.querySelector(".logo").style.color = "white";
+    }
 
-      const aaa = document.querySelectorAll('.headerHam__icon--bar');
-      aaa.forEach((targetBox) => {
-        targetBox.classList.remove('changeColor');
+    //  Icon
+    if (730 < window.scrollY) {
+      document.querySelector(".headerHam").classList.toggle("changeColor");
+
+      // Icon Text
+      const ddd = document.querySelectorAll(".headerHam__icon--bar");
+      ddd.forEach((dddd) => {
+        dddd.classList.toggle("changeColor");
       });
     }
-  });
-});
 
-// when scrolled for Logo
-window.addEventListener('scroll', function () {
-  if (760 < window.scrollY) {
-    //
-    document.querySelector('.logo').style.color = 'black';
+    // When scrolled for Burger Icon
+    window.addEventListener("scroll", function () {
+      if (730 < window.scrollY) {
+        // menu
+        document.querySelector(".headerHam").classList.add("changeColor");
+
+        // burger Icon
+        const aaa = document.querySelectorAll(".headerHam__icon--bar");
+        aaa.forEach((targetBox) => {
+          targetBox.classList.add("changeColor");
+        });
+      } else {
+        document.querySelector(".headerHam").classList.remove("changeColor");
+
+        const aaa = document.querySelectorAll(".headerHam__icon--bar");
+        aaa.forEach((targetBox) => {
+          targetBox.classList.remove("changeColor");
+        });
+      }
+    });
+    // when scrolled for Logo
+    window.addEventListener("scroll", function () {
+      if (630 < window.scrollY) {
+        document.querySelector(".logo").style.color = "black";
+      } else {
+        document.querySelector(".logo").style.color = "white";
+      }
+    });
+
+
+  } else if (huge.matches){
+  // wider than 1541px (PC Huge size) ---------------------------
+    // Logo
+    if (870 < window.scrollY) {
+      document.querySelector(".logo").style.color = "black";
+    } else {
+      document.querySelector(".logo").style.color = "white";
+    }
+
+    //  Icon
+    if (780 < window.scrollY) {
+      document.querySelector(".headerHam").classList.toggle("changeColor");
+
+      // Icon Text
+      const ddd = document.querySelectorAll(".headerHam__icon--bar");
+      ddd.forEach((dddd) => {
+        dddd.classList.toggle("changeColor");
+      });
+    }
+
+    // When scrolled for Burger Icon
+    window.addEventListener("scroll", function () {
+      if (870 < window.scrollY) {
+        // menu
+        document.querySelector(".headerHam").classList.add("changeColor");
+
+        // burger Icon
+        const aaa = document.querySelectorAll(".headerHam__icon--bar");
+        aaa.forEach((targetBox) => {
+          targetBox.classList.add("changeColor");
+        });
+      } else {
+        document.querySelector(".headerHam").classList.remove("changeColor");
+
+        const aaa = document.querySelectorAll(".headerHam__icon--bar");
+        aaa.forEach((targetBox) => {
+          targetBox.classList.remove("changeColor");
+        });
+      }
+    });
+    // when scrolled for Logo
+    window.addEventListener("scroll", function () {
+      if (780 < window.scrollY) {
+        document.querySelector(".logo").style.color = "black";
+      } else {
+        document.querySelector(".logo").style.color = "white";
+      }
+    });
+
+
+
+
+  } else if (tiny.matches){
+    // smaller than 375px (SP tiny size) ---------------------------
+      // Logo
+      if (570 < window.scrollY) {
+        document.querySelector(".logo").style.color = "black";
+      } else {
+        document.querySelector(".logo").style.color = "white";
+      }
+  
+      //  Icon
+      if (640 < window.scrollY) {
+        document.querySelector(".headerHam").classList.toggle("changeColor");
+  
+        // Icon Text
+        const ddd = document.querySelectorAll(".headerHam__icon--bar");
+        ddd.forEach((dddd) => {
+          dddd.classList.toggle("changeColor");
+        });
+      }
+  
+      // When scrolled for Burger Icon
+      window.addEventListener("scroll", function () {
+        if (640 < window.scrollY) {
+          // menu
+          document.querySelector(".headerHam").classList.add("changeColor");
+  
+          // burger Icon
+          const aaa = document.querySelectorAll(".headerHam__icon--bar");
+          aaa.forEach((targetBox) => {
+            targetBox.classList.add("changeColor");
+          });
+        } else {
+          document.querySelector(".headerHam").classList.remove("changeColor");
+  
+          const aaa = document.querySelectorAll(".headerHam__icon--bar");
+          aaa.forEach((targetBox) => {
+            targetBox.classList.remove("changeColor");
+          });
+        }
+      });
+      // when scrolled for Logo
+      window.addEventListener("scroll", function () {
+        if (570 < window.scrollY) {
+          document.querySelector(".logo").style.color = "black";
+        } else {
+          document.querySelector(".logo").style.color = "white";
+        }
+      });
+
+
+    } else if (sp.matches){
+      // smaller than 480px and bigger than 376px (SP size) ---------------------------
+        // Logo
+        if (730 < window.scrollY) {
+          document.querySelector(".logo").style.color = "black";
+        } else {
+          document.querySelector(".logo").style.color = "white";
+        }
+    
+        //  Icon
+        if (810 < window.scrollY) {
+          document.querySelector(".headerHam").classList.toggle("changeColor");
+    
+          // Icon Text
+          const ddd = document.querySelectorAll(".headerHam__icon--bar");
+          ddd.forEach((dddd) => {
+            dddd.classList.toggle("changeColor");
+          });
+        }
+    
+        // When scrolled for Burger Icon
+        window.addEventListener("scroll", function () {
+          if (810 < window.scrollY) {
+            // menu
+            document.querySelector(".headerHam").classList.add("changeColor");
+    
+            // burger Icon
+            const aaa = document.querySelectorAll(".headerHam__icon--bar");
+            aaa.forEach((targetBox) => {
+              targetBox.classList.add("changeColor");
+            });
+          } else {
+            document.querySelector(".headerHam").classList.remove("changeColor");
+    
+            const aaa = document.querySelectorAll(".headerHam__icon--bar");
+            aaa.forEach((targetBox) => {
+              targetBox.classList.remove("changeColor");
+            });
+          }
+        });
+        // when scrolled for Logo
+        window.addEventListener("scroll", function () {
+          if (730 < window.scrollY) {
+            document.querySelector(".logo").style.color = "black";
+          } else {
+            document.querySelector(".logo").style.color = "white";
+          }
+        });
+
+
+
+
+
   } else {
-    document.querySelector('.logo').style.color = 'white';
+    // if the page is 
+    // Logo
+    if (570 < window.scrollY) {
+      document.querySelector(".logo").style.color = "black";
+    } else {
+      document.querySelector(".logo").style.color = "white";
+    }
+
+    //  Icon
+    if (570 < window.scrollY) {
+      document.querySelector(".headerHam").classList.toggle("changeColor");
+
+      // Icon Text
+      const ddd = document.querySelectorAll(".headerHam__icon--bar");
+      ddd.forEach((dddd) => {
+        dddd.classList.toggle("changeColor");
+      });
+    }
+
+    // When scrolled for Burger Icon
+    window.addEventListener("scroll", function () {
+      if (630 < window.scrollY) {
+        // menu
+        document.querySelector(".headerHam").classList.add("changeColor");
+
+        // burger Icon
+        const aaa = document.querySelectorAll(".headerHam__icon--bar");
+        aaa.forEach((targetBox) => {
+          targetBox.classList.add("changeColor");
+        });
+      } else {
+        document.querySelector(".headerHam").classList.remove("changeColor");
+
+        const aaa = document.querySelectorAll(".headerHam__icon--bar");
+        aaa.forEach((targetBox) => {
+          targetBox.classList.remove("changeColor");
+        });
+      }
+    });
+
+    // when scrolled for Logo
+    window.addEventListener("scroll", function () {
+      if (570 < window.scrollY) {
+        //
+        document.querySelector(".logo").style.color = "black";
+      } else {
+        document.querySelector(".logo").style.color = "white";
+      }
+    });
   }
-});
+}
+
 // });
+
+// ------------------------------------
+// Change Header Icon color for Smart Phone
+// ------------------------------------
+// window.addEventListener("DOMContentLoaded", init );
+//   function init() {
+//     let query = window.matchMedia( "(min-width: 481px)" );
+
+//     if (query.matches) {
+//       // if the page is wider than 481px
+//       alert("パソコンサイズ！");
+//     } else {
+//       // if the page is smaller than 481px
+//       alert("SP size!!");
+//     }
+//   }
 
 // --------------------------------
 //  Clicking makes change the Font color by toggling white and black
 // --------------------------------
-const burgerIconBlack = document.querySelector('.headerHam');
-const burgerIconBlack2 = document.querySelectorAll('.headerHam__icon--bar');
+const burgerIconBlack = document.querySelector(".headerHam");
+const burgerIconBlack2 = document.querySelectorAll(".headerHam__icon--bar");
 
-burgerIconBlack.addEventListener('click', () => {
+burgerIconBlack.addEventListener("click", () => {
   //   if (760 < window.scrollY) {
-  burgerIconBlack.classList.toggle('ClickChangeColor');
+  burgerIconBlack.classList.toggle("ClickChangeColor");
   //   }
 });
 
 // Icon
-burgerIconBlack.addEventListener('click', () => {
+burgerIconBlack.addEventListener("click", () => {
   //   if (760 < window.scrollY) {
   burgerIconBlack2.forEach((bbb) => {
-    bbb.classList.toggle('ClickChangeColor2');
+    bbb.classList.toggle("ClickChangeColor2");
   });
   //   }
 });
 
 // --------------------------------
 //   Click entireWrap area and remove everything
-bodyMask.addEventListener('click', () => {
+bodyMask.addEventListener("click", () => {
   // Hidden menu
-  overWrapActive.classList.remove('hiddenMenu');
+  overWrapActive.classList.remove("hiddenMenu");
 
   // Body Bg
-  bodyMask.classList.remove('mask');
+  bodyMask.classList.remove("mask");
 
   // Burger text
-  burgerIconBlack.classList.remove('ClickChangeColor');
+  burgerIconBlack.classList.remove("ClickChangeColor");
 
   //   Burger Icon
   burgerIconBlack2.forEach((bbb) => {
-    bbb.classList.remove('ClickChangeColor2');
+    bbb.classList.remove("ClickChangeColor2");
   });
 
   // remove Burger Icon class
-  burgerIconTop.classList.remove('active');
-  burgerIconMiddle.classList.remove('active');
-  burgerIconBottom.classList.remove('active');
+  burgerIconTop.classList.remove("active");
+  burgerIconMiddle.classList.remove("active");
+  burgerIconBottom.classList.remove("active");
 });
 
 //  Get the scroll number of X and Y
-window.addEventListener('DOMContentLoaded', function () {
-  window.addEventListener('scroll', function () {
-    console.log('横スクロール：' + window.scrollX);
-    console.log('縦スクロール：' + window.scrollY);
+window.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("scroll", function () {
+    console.log("横スクロール：" + window.scrollX);
+    console.log("縦スクロール：" + window.scrollY);
   });
 });
