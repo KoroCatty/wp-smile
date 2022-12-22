@@ -20,7 +20,7 @@ burgerIcon.addEventListener('click', () => {
   burgerIconMiddle.classList.toggle('active');
   burgerIconBottom.classList.toggle('active');
 
-  burgerMenuEnablePointerEvents.classList.toggle("active");
+  burgerMenuEnablePointerEvents.classList.add("active");
 
 
   // toggling Body Bg

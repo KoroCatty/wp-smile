@@ -19,7 +19,7 @@ burgerIcon.addEventListener("click", () => {
   burgerIconMiddle.classList.toggle("active");
   burgerIconBottom.classList.toggle("active");
 
-  burgerMenuEnablePointerEvents.classList.toggle("active");
+  burgerMenuEnablePointerEvents.classList.add("active");
 
   // toggling Body Bg
   bodyMask.classList.toggle("mask");
@@ -40,17 +40,18 @@ function init() {
   let huge = window.matchMedia("(min-width: 1541px)");
 
     // Switch JS depending on the browser size 
+
   if (query.matches) {
     // if the page is wider than 481px smaller than 1540px (PC) ---------
     // Logo
-    if (730 < window.scrollY) {
+    if (700 < window.scrollY) {
       document.querySelector(".logo").style.color = "black";
     } else {
       document.querySelector(".logo").style.color = "white";
     }
 
     //  Icon
-    if (730 < window.scrollY) {
+    if (700 < window.scrollY) {
       document.querySelector(".headerHam").classList.toggle("changeColor");
 
       // Icon Text
@@ -62,7 +63,7 @@ function init() {
 
     // When scrolled for Burger Icon
     window.addEventListener("scroll", function () {
-      if (730 < window.scrollY) {
+      if (700 < window.scrollY) {
         // menu
         document.querySelector(".headerHam").classList.add("changeColor");
 
@@ -141,18 +142,18 @@ function init() {
 
 
 
-
+// iPhone 8 検証済み
   } else if (tiny.matches){
     // smaller than 375px (SP tiny size) ---------------------------
       // Logo
-      if (570 < window.scrollY) {
+      if (510 < window.scrollY) {
         document.querySelector(".logo").style.color = "black";
       } else {
         document.querySelector(".logo").style.color = "white";
       }
   
       //  Icon
-      if (640 < window.scrollY) {
+      if (530 < window.scrollY) {
         document.querySelector(".headerHam").classList.toggle("changeColor");
   
         // Icon Text
@@ -164,7 +165,7 @@ function init() {
   
       // When scrolled for Burger Icon
       window.addEventListener("scroll", function () {
-        if (640 < window.scrollY) {
+        if (530 < window.scrollY) {
           // menu
           document.querySelector(".headerHam").classList.add("changeColor");
   
@@ -184,25 +185,25 @@ function init() {
       });
       // when scrolled for Logo
       window.addEventListener("scroll", function () {
-        if (570 < window.scrollY) {
+        if (530 < window.scrollY) {
           document.querySelector(".logo").style.color = "black";
         } else {
           document.querySelector(".logo").style.color = "white";
         }
       });
 
-
+// iPhone 11 検証済み
     } else if (sp.matches){
       // smaller than 480px and bigger than 376px (SP size) ---------------------------
         // Logo
-        if (730 < window.scrollY) {
+        if (700 < window.scrollY) {
           document.querySelector(".logo").style.color = "black";
         } else {
           document.querySelector(".logo").style.color = "white";
         }
     
         //  Icon
-        if (810 < window.scrollY) {
+        if (700 < window.scrollY) {
           document.querySelector(".headerHam").classList.toggle("changeColor");
     
           // Icon Text
@@ -214,7 +215,7 @@ function init() {
     
         // When scrolled for Burger Icon
         window.addEventListener("scroll", function () {
-          if (810 < window.scrollY) {
+          if (700 < window.scrollY) {
             // menu
             document.querySelector(".headerHam").classList.add("changeColor");
     
@@ -234,7 +235,7 @@ function init() {
         });
         // when scrolled for Logo
         window.addEventListener("scroll", function () {
-          if (730 < window.scrollY) {
+          if (650 < window.scrollY) {
             document.querySelector(".logo").style.color = "black";
           } else {
             document.querySelector(".logo").style.color = "white";
