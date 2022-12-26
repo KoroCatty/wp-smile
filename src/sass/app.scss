@@ -625,3 +625,25 @@ text-align: start;
     font-size: 0.7rem;
   }
 }
+
+
+
+/* ------------------------
+// img ギャラリー　custom post
+------------------------ */
+.customFiled {
+  text-align: center;
+  margin: 0 auto;
+
+  &__img {
+max-width: 800px;
+
+    @include mq(s) {
+      width: 100% !important;
+    }
+    @include mq(m) {
+      max-width: 480px !important;
+    }
+
+  }
+}

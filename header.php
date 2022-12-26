@@ -73,6 +73,12 @@
                 <a href="<?php echo esc_url( get_category_link( 1 ) ); ?>" class="overWrap__box--link">Blog</a>
             </li>
 
+            <!-- gallery Link -->
+            <li class="overWrap__box--item">
+                <!-- カテゴリーぺーじへのリンク -->
+                <a href="<?php echo esc_url( get_post_type_archive_link('img' ) ); ?>" class="overWrap__box--link">Image Gallery</a>
+            </li>
+
             <li class="overWrap__box--item">
                 <a href="<?php echo esc_url( home_url('/contact-us') ); ?>" class="overWrap__box--link">CONTACT </a>
             </li>

@@ -1,1 +1,140 @@
-(()=>{var e=document.querySelector(".headerHam"),o=document.querySelector(".headerHam__icon--bar.top"),c=document.querySelector(".headerHam__icon--bar.middle"),t=document.querySelector(".headerHam__icon--bar.bottom"),l=document.querySelector(".overWrap"),r=document.querySelector(".entireWrap"),n=document.querySelector(".overWrap");e.addEventListener("click",(function(){o.classList.toggle("active"),c.classList.toggle("active"),t.classList.toggle("active"),l.classList.add("active"),r.classList.toggle("mask"),n.classList.toggle("hiddenMenu")})),window.addEventListener("DOMContentLoaded",(function(){(250<window.scrollY?document.querySelector(".logo").style.color="black":document.querySelector(".logo").style.color="white",280<window.scrollY)&&(document.querySelector(".headerHam").classList.toggle("changeColor"),document.querySelectorAll(".headerHam__icon--bar").forEach((function(e){e.classList.toggle("changeColor")})));window.addEventListener("scroll",(function(){280<window.scrollY?(document.querySelector(".headerHam").classList.add("changeColor"),document.querySelectorAll(".headerHam__icon--bar").forEach((function(e){e.classList.add("changeColor")}))):(document.querySelector(".headerHam").classList.remove("changeColor"),document.querySelectorAll(".headerHam__icon--bar").forEach((function(e){e.classList.remove("changeColor")})))}))})),window.addEventListener("scroll",(function(){250<window.scrollY?document.querySelector(".logo").style.color="black":document.querySelector(".logo").style.color="white"}));var a=document.querySelector(".headerHam"),s=document.querySelectorAll(".headerHam__icon--bar");a.addEventListener("click",(function(){a.classList.toggle("ClickChangeColor")})),a.addEventListener("click",(function(){s.forEach((function(e){e.classList.toggle("ClickChangeColor2")}))})),r.addEventListener("click",(function(){n.classList.remove("hiddenMenu"),r.classList.remove("mask"),a.classList.remove("ClickChangeColor"),s.forEach((function(e){e.classList.remove("ClickChangeColor2")})),l.classList.remove("active"),o.classList.remove("active"),c.classList.remove("active"),t.classList.remove("active")})),window.addEventListener("DOMContentLoaded",(function(){window.addEventListener("scroll",(function(){console.log("横スクロール："+window.scrollX),console.log("縦スクロール："+window.scrollY)}))}))})();
+/******/ (() => { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!*********************************!*\
+  !*** ./src/javascript/about.js ***!
+  \*********************************/
+// ------------------------------------
+// Hamburger
+// ------------------------------------
+var burgerIcon = document.querySelector('.headerHam');
+var burgerIconTop = document.querySelector('.headerHam__icon--bar.top');
+var burgerIconMiddle = document.querySelector('.headerHam__icon--bar.middle');
+var burgerIconBottom = document.querySelector('.headerHam__icon--bar.bottom');
+
+// pointer-eventsを制御
+var burgerMenuEnablePointerEvents = document.querySelector(".overWrap");
+
+// Body Bg
+var bodyMask = document.querySelector('.entireWrap');
+// Hidden menu
+var overWrapActive = document.querySelector('.overWrap');
+burgerIcon.addEventListener('click', function () {
+  burgerIconTop.classList.toggle('active');
+  burgerIconMiddle.classList.toggle('active');
+  burgerIconBottom.classList.toggle('active');
+  burgerMenuEnablePointerEvents.classList.add("active");
+
+  // toggling Body Bg
+  bodyMask.classList.toggle('mask');
+
+  //   toggling Hidden menu
+  overWrapActive.classList.toggle('hiddenMenu');
+});
+
+// ------------------------------------
+// Burger Icon scrolling change Color 
+// ------------------------------------
+window.addEventListener('DOMContentLoaded', function () {
+  // when loaded page
+  if (250 < window.scrollY) {
+    document.querySelector('.logo').style.color = 'black';
+  } else {
+    document.querySelector('.logo').style.color = 'white';
+  }
+
+  //  Icon
+  if (280 < window.scrollY) {
+    document.querySelector('.headerHam').classList.toggle('changeColor');
+
+    // Icon Text
+    var ddd = document.querySelectorAll('.headerHam__icon--bar');
+    ddd.forEach(function (dddd) {
+      dddd.classList.toggle('changeColor');
+    });
+  }
+
+  // When scrolled for Burger Icon
+  window.addEventListener('scroll', function () {
+    if (280 < window.scrollY) {
+      // menu
+      document.querySelector('.headerHam').classList.add('changeColor');
+
+      // burger Icon
+      var aaa = document.querySelectorAll('.headerHam__icon--bar');
+      aaa.forEach(function (targetBox) {
+        targetBox.classList.add('changeColor');
+      });
+    } else {
+      document.querySelector('.headerHam').classList.remove('changeColor');
+      var _aaa = document.querySelectorAll('.headerHam__icon--bar');
+      _aaa.forEach(function (targetBox) {
+        targetBox.classList.remove('changeColor');
+      });
+    }
+  });
+});
+
+// when scrolled for Logo
+window.addEventListener('scroll', function () {
+  if (250 < window.scrollY) {
+    //
+    document.querySelector('.logo').style.color = 'black';
+  } else {
+    document.querySelector('.logo').style.color = 'white';
+  }
+});
+// });
+
+// --------------------------------
+//  Clicking makes change the Font color by toggling white and black 
+// --------------------------------
+var burgerIconBlack = document.querySelector('.headerHam');
+var burgerIconBlack2 = document.querySelectorAll('.headerHam__icon--bar');
+burgerIconBlack.addEventListener('click', function () {
+  //   if (760 < window.scrollY) {
+  burgerIconBlack.classList.toggle('ClickChangeColor');
+  //   }
+});
+
+// Icon
+burgerIconBlack.addEventListener('click', function () {
+  //   if (760 < window.scrollY) {
+  burgerIconBlack2.forEach(function (bbb) {
+    bbb.classList.toggle('ClickChangeColor2');
+  });
+  //   }
+});
+
+// --------------------------------
+//   Click entireWrap area and remove everything 
+bodyMask.addEventListener('click', function () {
+  // Hidden menu 
+  overWrapActive.classList.remove('hiddenMenu');
+
+  // Body Bg
+  bodyMask.classList.remove('mask');
+
+  // Burger text
+  burgerIconBlack.classList.remove('ClickChangeColor');
+
+  //   Burger Icon 
+  burgerIconBlack2.forEach(function (bbb) {
+    bbb.classList.remove('ClickChangeColor2');
+  });
+  burgerMenuEnablePointerEvents.classList.remove("active");
+
+  // remove Burger Icon class 
+  burgerIconTop.classList.remove('active');
+  burgerIconMiddle.classList.remove('active');
+  burgerIconBottom.classList.remove('active');
+});
+
+//  Get the scroll number of X and Y
+window.addEventListener('DOMContentLoaded', function () {
+  window.addEventListener('scroll', function () {
+    console.log('横スクロール：' + window.scrollX);
+    console.log('縦スクロール：' + window.scrollY);
+  });
+});
+/******/ })()
+;
