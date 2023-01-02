@@ -53,12 +53,12 @@
     <!-- Hamburger Hidden Menu -->
     <nav class="overWrap">
         <ul class="overWrap__box"> <!-- active class-->
-            <li class="overWrap__box--item">
-                <a href="<?php echo esc_url( home_url('/') );  ?>" class="">
-                    <img src="<?php echo esc_url( get_template_directory_uri() );  ?>/src/img/site-logo.svg" alt="Logo"
+            <!-- <li class="overWrap__box--item">
+                <a href="<?php // echo esc_url( home_url('/') );  ?>" class="">
+                    <img src="<?php // echo esc_url( get_template_directory_uri() );  ?>/src/img/site-logo.svg" alt="Logo"
                         class="overWrap__box--img" />
                 </a>
-            </li>
+            </li> -->
 
             <li class="overWrap__box--item">
                 <a href="<?php echo esc_url( home_url('/') ); ?>" class="overWrap__box--link">Home</a>

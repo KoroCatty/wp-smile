@@ -30,7 +30,7 @@
     <!-- -------------------- -->
     <section class="topAbout">
         <div class="topAbout__img">
-            <img src="<?php echo esc_url(get_template_directory_uri() ); ?>/src/img/about-img.jpg" alt="top about image"
+            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/about-img.jpg" alt="top about image"
                 class="topAbout__imgContent" />
             <div class="topAbout__box">
                 <h2 class="topAbout__box--title">ABOUT US</h2>
@@ -42,7 +42,8 @@
                     K-SMILEの社名にはそんな想いが込められています。
                 </p>
                 <div class="topAbout__box--btn">
-                    <a href="<?php echo esc_url( home_url('/about-us') );  ?>" class="topAbout__box--btnLink">READ MORE</a>
+                    <a href="<?php echo esc_url(home_url('/about-us')); ?>" class="topAbout__box--btnLink">READ
+                        MORE</a>
                 </div>
             </div>
         </div>
@@ -56,7 +57,7 @@
             <div class="introItem">
                 <div class="introItem__title">WORKS</div>
                 <div class="introItem__img">
-                    <img src="<?php echo esc_url(get_template_directory_uri() ); ?>/src/img/works-img.jpg"
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/works-img.jpg"
                         alt="Introduction works" class="introItem__imgContent" />
                     <p class="introItem__caption">K-SMILEの制作実績を紹介します。</p>
                     <div class="introItem--btn">
@@ -68,13 +69,13 @@
             <div class="introItem">
                 <div class="introItem__title">CULTURE</div>
                 <div class="introItem__img">
-                    <img src="<?php echo esc_url(get_template_directory_uri() ); ?>/src/img/culture-img.jpg"
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/culture-img.jpg"
                         alt="Introduction works" class="introItem__imgContent" />
                     <p class="introItem__caption">
                         K-SMILEの社内文化について紹介します。
                     </p>
                     <div class="introItem--btn">
-                        <a  class="introItem--btnLink">READ MORE</a>
+                        <a class="introItem--btnLink">READ MORE</a>
                     </div>
                 </div>
             </div>
@@ -90,54 +91,136 @@
 
 
         <div class="news__box">
-            <?php if( have_posts() ) : ?>
-            <?php while( have_posts() ) : the_post(); 
-        ?>
-            <div class="news__boxItem <?php post_class('news'); ?>">
-                <span class="news__boxItem--category">
-                    <?php the_category(); ?>
-                </span>
-                <time class="news__boxItem--date" datetime="<?php the_time('Y-m-d'); ?> ">
-                    <?php the_time('Y年m月d日'); ?>
-                </time>
-                <p class="news__boxItem--text">
-                    <a href=" <?php the_permalink(); ?>" class="news__boxItem--link">
-                        <?php the_title(); ?>
-                    </a>
-                </p>
-            </div>
-            <?php endwhile; ?>
-            <?php endif; ?>
-            
-<!-- pagination Plugin -->
-            <?php if( function_exists( 'wp_pagenavi')) { wp_pagenavi();} ?>
+            <?php if (have_posts()): ?>
+                <?php while (have_posts()):
+                the_post();
+                ?>
+                    <div class="news__boxItem <?php post_class('news'); ?>">
+                        <span class="news__boxItem--category">
+                            <?php the_category(); ?>
+                        </span>
+                        <time class="news__boxItem--date" datetime="<?php the_time('Y-m-d'); ?> ">
+                            <?php the_time('Y年m月d日'); ?>
+                        </time>
+                        <p class="news__boxItem--text">
+                            <a href=" <?php the_permalink(); ?>" class="news__boxItem--link">
+                                <?php the_title(); ?>
+                            </a>
+                        </p>
+                    </div>
+                    <?php endwhile; ?>
+                <?php endif; ?>
 
-            <!-- <div class="news__boxItem">
-                <time class="news__boxItem--date">2020.02.01</time>
-                <p class="news__boxItem--text">
-                    イベントレポート「VRクリエイター座談会 〜5Gの次に来るもの〜」
-                </p>
-            </div>
-            <div class="news__boxItem">
-                <time class="news__boxItem--date">2020.01.18</time>
-                <p class="news__boxItem--text">
-                    プレスリリースのお知らせ DIGGIN’ RECORDS
-                </p>
-            </div>
-            <div class="news__boxItem">
-                <time class="news__boxItem--date">2020.01.01</time>
-                <p class="news__boxItem--text">
-                    新年明けましておめでとうございます
-                </p>
-            </div>
-
-            <div class="news--btn">
-                <a href="" class="news--btnLink">READ MORE</a>
-            </div> -->
+            <!-- pagination Plugin -->
+            <?php if (function_exists('wp_pagenavi')) {
+            wp_pagenavi();
+        } ?>
         </div>
 
 
+        <!-- Each archive page Link -->
+        <?php
+        // news
+        $newsArchive = get_category_by_slug('news');
+        $newsArchive_id = $newsArchive->term_id;
+        $newsArchive_link = get_category_link($newsArchive_id);
+        ?>
+        <div class="postArchive__link">
+            <a href="<?php echo esc_url($newsArchive_link); ?>">お知らせ一覧へ</a>
+        </div>
+
+        <?php
+        // Column
+        $cat = get_category_by_slug('column');
+        $cat_id = $cat->term_id;
+        $cat_link = get_category_link($cat_id);
+        ?>
+        <div class="postArchive__link">
+            <a href="<?php echo esc_url($cat_link); ?>">コラム一覧へ</a>
+        </div>
+
     </section>
+
+    <!-- -------------------- -->
+    <!-- Image Gallery (custom posts)   -->
+    <!-- -------------------- -->
+    <section class="imgGallery">
+
+        <h2 class="imgGallery__heading">IMAGE GALLERY POSTS</h2>
+        <article class="imgGallery__wrap">
+
+            <?php if (have_posts()):
+            while (have_posts()):
+                the_post(); ?>
+
+                    <?php endwhile; ?>
+                <?php endif; ?>
+
+            <?php
+            $args = array(
+                'post_type' => 'img',
+                // CPT UI で指定した slug を入力
+                'posts_per_page' => 2,
+            );
+            $new_query = new WP_Query($args);
+            if ($new_query->have_posts()):
+                while ($new_query->have_posts()):
+                    $new_query->the_post(); ?>
+
+                    <div class="imgGallery__item">
+                        <h1 class="imgGallery__title">
+                            <a href="<?php the_permalink(); ?>" class="imgGallery__titleLink">
+                                <?php the_title(); ?>
+                            </a>
+                        </h1>
+
+                        <time class="imgGallery__time">
+                            <?php echo esc_html(get_the_date()); ?>
+                        </time>
+
+                        <div class="imgGallery__content">
+                            <?php // the_excerpt(); ?>
+
+                            <a href="<?php the_permalink(); ?>" class="imgGallery__titleLink">
+
+
+                                <?php if (has_post_thumbnail()):
+                                the_post_thumbnail();
+                            endif; ?>
+                            </a>
+                        </div>
+                    </div>
+
+                    <?php
+                    ?>
+
+
+                    <?php endwhile;
+                wp_reset_postdata();
+            else: ?>
+
+                <!-- 投稿がない時 -->
+                <p class="imgGallery__noPosts">投稿はありません。</p>
+                <?php endif; ?>
+
+        </article>
+        <div class="postArchive__link imgGallery">
+            <a href="<?php echo esc_url(get_post_type_archive_link('img')); ?>">Gallery 一覧へ</a>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <!-- -------------------- -->
     <!-- Top Contact   -->
@@ -146,7 +229,7 @@
         <div class="topContact__wrap">
             <div class="topContact__box">
                 <div class="topContact__boxImg">
-                    <img src="<?php echo esc_url(get_template_directory_uri() ); ?>/src/img/recruit-img.jpg"
+                    <img src="<?php echo esc_url(get_template_directory_uri()); ?>/src/img/recruit-img.jpg"
                         alt="top contact" class="topContact__boxImg--content" />
                 </div>
             </div>
@@ -159,7 +242,8 @@
                 </p>
 
                 <div class="topContact--btn">
-                    <a href="<?php echo esc_url( home_url('/contact-us') );  ?>"  class="topContact--btnLink">READ MORE</a>
+                    <a href="<?php echo esc_url(home_url('/contact-us')); ?>" class="topContact--btnLink">READ
+                        MORE</a>
                 </div>
             </div>
         </div>

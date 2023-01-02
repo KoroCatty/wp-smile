@@ -223,6 +223,7 @@ width: 50% !important;
 @include mq(s) {
   width: 90% !important;
   display: block;
+  margin: 0 auto;
   }
 }
 

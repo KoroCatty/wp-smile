@@ -178,6 +178,7 @@
 
     @include mq(s) { 
       width: 50%;
+      text-align: end;
     }
 
     i {

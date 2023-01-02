@@ -1,16 +1,16 @@
-@use 'reset' as *;
+@use "reset" as *;
 
-@use 'setting' as *;
+@use "setting" as *;
 
-@use 'header' as *;
+@use "header" as *;
 
-@use 'about' as *;
+@use "about" as *;
 
-@use 'contact' as *;
+@use "contact" as *;
 
-@use 'single' as *;
+@use "single" as *;
 
-@use 'archive' as *;
+@use "archive" as *;
 
 // @import 'node_modules/bootstrap/scss/bootstrap';
 
@@ -23,11 +23,11 @@
 ////////////////////////////////////
 // mixin定義 For deploying purpose
 $breakpoints: (
-  's': 'screen and (max-width:480px)',
-  'm': 'screen and (max-width: 767px) and (min-width:480px)',
+  "s": "screen and (max-width:480px)",
+  "m": "screen and (max-width: 767px) and (min-width:480px)",
   // 'l': 'screen and (max-width: 1080px) and (min-width: 768px)',
-  'l': 'screen and (max-width: 1079px) and (min-width: 768px)',
-  'xl': 'screen and (min-width: 1080px) ',
+  "l": "screen and (max-width: 1079px) and (min-width: 768px)",
+  "xl": "screen and (min-width: 1080px) ",
 ) !default;
 
 @mixin mq($breakpoint: md) {
@@ -77,7 +77,7 @@ body {
     // width: 54%;
     // height: 86%;
     position: absolute;
-    content: '';
+    content: "";
     top: 0;
     right: 0;
     z-index: -1;
@@ -91,7 +91,7 @@ body {
   }
 
   &__img {
-    background-image: url('images/kv-img.jpg'); // from dist/app.css
+    background-image: url("images/kv-img.jpg"); // from dist/app.css
     background-size: cover;
     width: 80%;
     height: 90%;
@@ -115,7 +115,7 @@ body {
       left: 62.5%;
     }
 
-    @media screen and (max-width:950px) and (min-width:768px) {
+    @media screen and (max-width: 950px) and (min-width: 768px) {
       left: 60vw;
     }
 
@@ -123,7 +123,7 @@ body {
       font-family: $YuGothic;
       font-size: 1.2rem;
       letter-spacing: 1px;
-line-height: 1.5;
+      line-height: 1.5;
       @include mq(s) {
         font-size: 1rem;
       }
@@ -273,7 +273,6 @@ line-height: 1.5;
 
   &Item {
     @include mq(s) {
-
       &:nth-child(1) {
         margin-bottom: 40px;
       }
@@ -297,7 +296,6 @@ line-height: 1.5;
     }
 
     &__img {
-
       @include mq(s) {
         margin: 0 auto;
         text-align: center;
@@ -375,12 +373,12 @@ line-height: 1.5;
     font-family: Montserrat;
     font-weight: 900;
 
-    @include mq(s) { 
+    @include mq(s) {
       font-size: 1.8rem;
       margin-bottom: 32px;
     }
-  @include mq(m) { 
-    font-size: 2rem;
+    @include mq(m) {
+      font-size: 2rem;
     }
   }
 
@@ -400,24 +398,23 @@ line-height: 1.5;
     &Item {
       height: 100px;
 
-      @include mq(s) { 
-// margin-top: 20px;
+      @include mq(s) {
+        // margin-top: 20px;
       }
-    @include mq(m) { 
-    
+      @include mq(m) {
       }
 
       // &:nth-child(1) {
       //   margin-bottom: 40px;
 
-      //   @include mq(s) { 
+      //   @include mq(s) {
       //     margin-bottom: 0;
       //           }
       // }
       // &:nth-child(3) {
       //   margin-top: 40px;
 
-      //   @include mq(s) { 
+      //   @include mq(s) {
       //     margin-top: 20px;
       //           }
       // }
@@ -426,7 +423,7 @@ line-height: 1.5;
         font-size: 0.8rem;
         color: #cecece;
         font-family: Montserrat Medium;
-        margin:14px 0 10px 0;
+        margin: 14px 0 10px 0;
         display: block;
       }
 
@@ -435,13 +432,12 @@ line-height: 1.5;
         border-bottom: 1px solid $bg;
         padding-bottom: 8px;
         font-family: $YuGothic;
-       
-        @include mq(s) { 
+
+        @include mq(s) {
           font-size: 0.8rem;
           margin-top: 12px;
         }
-      @include mq(m) { 
-     
+        @include mq(m) {
         }
       }
 
@@ -450,7 +446,7 @@ line-height: 1.5;
         color: rgb(29, 29, 29);
         font-size: 1.2rem;
 
-        @include mq(s) { 
+        @include mq(s) {
           font-size: 1rem;
           // line-height: 1.5rem;
         }
@@ -462,11 +458,11 @@ line-height: 1.5;
     margin-top: 30px;
     text-align: end;
 
-    @include mq(s) { 
-text-align: start;
+    @include mq(s) {
+      text-align: start;
     }
-  @include mq(m) { 
-    text-align: start;
+    @include mq(m) {
+      text-align: start;
     }
 
     &Link {
@@ -499,9 +495,128 @@ text-align: start;
   }
 }
 
+// 各アーカイブへのリンク　ボタン
+.postArchive__link {
+  margin: 40px 0;
+  padding-right: 20px;
+  text-align: end;
 
+  a {
+    text-decoration: none;
+    color: rgb(38, 38, 167);
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 0.9rem;
+    box-shadow: 1px 2px 2px rgb(170, 170, 170);
+  }
+}
 
+/* ------------------------
+// Image Gallery (Custom posts) 
+------------------------ */
+.imgGallery {
+  background-color: rgb(203, 202, 202);
+  padding: 60px 0;
+  color: white;
 
+  @include mq(s) {
+    padding: 20px 0;
+  }
+  @include mq(m) {
+  padding: 40px 0;
+  }
+
+  &__heading {
+    font-size: 2rem;
+    font-family: Montserrat;
+    font-weight: bold;
+    text-align: center;
+
+    @include mq(s) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(s) {
+      display: block;
+    }
+    @include mq(m) {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    margin-top: 40px;
+
+    @include mq(s) {
+      margin-left: 20px;
+      margin-top: 30px;
+    }
+  }
+
+  &__title {
+
+    &Link {
+      font-size: 2rem;
+      text-decoration: none;
+      color: rgb(255, 255, 255);
+      font-weight: 900;
+
+      @include mq(s) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &__time {
+    margin: 8px 0;
+    display: block;
+    font-size: 0.9rem;
+  }
+
+  &__content {
+
+    @include mq(s) {
+    }
+    @include mq(m) {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    img {
+      width: 400px !important;
+      height: 280px !important;
+
+      @include mq(s) {
+        width: 90% !important;
+      }
+      @include mq(m) {
+        width: 80% !important;
+        height: 330px !important;
+      }
+    }
+  }
+
+  .postArchive__link.imgGallery {
+    max-width: 1080px;
+    margin: 0 auto;
+    text-align: end;
+    padding-right: 20px;
+
+    @include mq(s) {
+  margin-top: 20px;
+    }
+  }
+}
 
 /* ------------------------
 // Top Contact 
@@ -535,7 +650,7 @@ text-align: start;
   }
 
   &__box {
-    @include mq(s) { 
+    @include mq(s) {
       margin-left: -20px;
     }
 
@@ -626,8 +741,6 @@ text-align: start;
   }
 }
 
-
-
 /* ------------------------
 // img ギャラリー　custom post
 ------------------------ */
@@ -636,7 +749,7 @@ text-align: start;
   margin: 0 auto;
 
   &__img {
-max-width: 800px;
+    max-width: 800px;
 
     @include mq(s) {
       width: 100% !important;
@@ -644,6 +757,5 @@ max-width: 800px;
     @include mq(m) {
       max-width: 480px !important;
     }
-
   }
 }
