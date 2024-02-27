@@ -140,8 +140,6 @@ function init() {
       }
     });
 
-
-
 // iPhone 8 検証済み
   } else if (tiny.matches){
     // smaller than 375px (SP tiny size) ---------------------------
