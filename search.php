@@ -14,11 +14,7 @@
         </div>
     </section>
 
-
-
-
     <main class="searchBody">
-
         <h2 class="SearchTitle">サイト内検索<span>SEARCH</span></h2>
         <h2 class="searchedWord">
             「<?php the_search_query(); ?>」の検索結果

@@ -74,13 +74,6 @@
             <?php endwhile; ?>
         <?php endif; ?>
     </main>
-
-
-
-
-
-
-
 </div>
 <!-- .entireWrap -->
 <?php get_footer(); ?>
